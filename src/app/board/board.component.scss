@@ -1,0 +1,23 @@
+main{
+    margin-top: 3px;
+    display: grid;
+    grid-template-columns: 30vw 30vw 30vw;
+    grid-gap: 0px;
+}
+
+app-square{
+    border-radius: 15px;
+    border: 2px gray solid;
+    height: 30vw;
+    font-size: large;
+}
+
+@media screen and (min-width: 800px) {
+    main{
+        grid-template-columns: 200px 200px 200px;
+    }
+    app-square{
+        height: 200px;
+    }
+}
+

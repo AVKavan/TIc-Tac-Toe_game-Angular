@@ -1,0 +1,21 @@
+<h2 class="text-info text-center" style="--bs-text-opacity: .75;">Current Player is {{Player}} </h2>
+<div class="d-flex justify-content-center my-3">
+<button class="btn btn-danger  btn-outline-white fw-bold text-white" (click)="newgame()">Start a new game</button>
+</div>
+
+<h3 *ngIf="winner"  class="text-warning text-center fs-3 fw-bold">
+    The winner is player {{winner}}!! {{counter}}
+</h3>
+
+<h3 *ngIf="!squares.some(isFull) && !winner" class="text-warning text-center fs-3 fw-bold">
+    Oops! No winner, start a new game!
+</h3>
+<main>
+   <app-square *ngFor="let val of squares; index as i" 
+   [value]="val" 
+   (click)="makeMove(i)"
+ 
+   >
+
+   </app-square>
+</main>
